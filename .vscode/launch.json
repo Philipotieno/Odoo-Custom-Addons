@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Dev",
+            "type": "python",
+            "request": "launch",
+            // "program": "/home/andru/Projects/odoo/test/odoo/odoo-bin",
+            "program": "/Users/philip/Projects/odoo15/odoo/odoo-bin",
+            // "python": "/home/andru/.cache/pypoetry/virtualenvs/general-KDEL1hpu-py3.8/bin/python",
+            "python": "/Users/philip/Library/Caches/pypoetry/virtualenvs/general-JLFyjc3u-py3.8/bin/python3",
+            "console": "integratedTerminal",
+            "args" : [
+                "--c",
+                "/Users/philip/Projects/odoo15/odoo.conf"
+            ]
+        }
+    ]
+}
