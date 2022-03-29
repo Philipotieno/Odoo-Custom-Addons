@@ -30,6 +30,7 @@
             </form>
         </field>
     </record>
+
     <!-- To-Do Task List view -->
     <record id="view_tree_todo_task" model="ir.ui.view">
         <field name="name">
@@ -46,4 +47,18 @@
             </tree>
         </field>
     </record>
+
+    <!-- To do task search view -->
+    <record id="view_search_todo_task" model="ir.ui.view">
+        <field name="name">To-do Task Filters</field>
+        <field name="model">todo.task</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="user_id" />
+                <filter string="Not Done" name="filter_not_done" domain="[('is_done', '=', False)]"/>
+                <filter string="Done" domain="[('is_done', '!=', True)]"/>
+            </search>
+        </field>
+    </record>
+
 </odoo>
