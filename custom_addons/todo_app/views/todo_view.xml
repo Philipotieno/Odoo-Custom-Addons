@@ -2,12 +2,8 @@
 <odoo>
     <!-- To-Do Task Form view -->
     <record id="view_form_todo_task" model="ir.ui.view">
-        <field name="name">
-			To-do Task Form
-        </field>
-        <field name="model">
-			todo.task
-        </field>
+        <field name="name">To-do Task Form</field>
+        <field name="model">todo.task</field>
         <field name="arch" type="xml">
             <form>
                 <header>
@@ -30,15 +26,10 @@
             </form>
         </field>
     </record>
-
     <!-- To-Do Task List view -->
     <record id="view_tree_todo_task" model="ir.ui.view">
-        <field name="name">
-			To-do Task Tree
-        </field>
-        <field name="model">
-			todo.task
-        </field>
+        <field name="name">To-do Task Tree</field>
+        <field name="model">todo.task</field>
         <field name="arch" type="xml">
             <tree decoration-danger="date_deadline &lt; current_date" decoration-success="date_deadline &gt; current_date" decoration-muted="is_done" decoration-info="is_done == False">
                 <field name="name" />
@@ -47,7 +38,6 @@
             </tree>
         </field>
     </record>
-
     <!-- To do task search view -->
     <record id="view_search_todo_task" model="ir.ui.view">
         <field name="name">To-do Task Filters</field>
@@ -55,10 +45,9 @@
         <field name="arch" type="xml">
             <search>
                 <field name="user_id" />
-                <filter string="Not Done" name="filter_not_done" domain="[('is_done', '=', False)]"/>
-                <filter string="Done" domain="[('is_done', '!=', True)]"/>
+                <filter name="filter_not_done" string="Not Done"  domain="[('is_done', '=', False)]" />
+                <filter name="filter_done" string="Done" domain="[('is_done', '!=', True)]" />
             </search>
         </field>
     </record>
-
 </odoo>
