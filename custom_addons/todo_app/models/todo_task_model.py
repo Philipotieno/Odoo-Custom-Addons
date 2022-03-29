@@ -10,9 +10,10 @@ class TodoTask(models.Model):
     name = fields.Char('Description', required=True)
     is_done = fields.Boolean('Done?')
     active = fields.Boolean('Active?', default=True)
+    date_deadline = fields.Date('Deadline')
     user_id = fields.Many2one(
         'res.users', string='Responsible', default=lambda self: self.env.user)
-    team_ids = fields.Many2one('res.partner', string='Team')
+    team_ids = fields.Many2many('res.partner', string='Team')
 
     # @api.depends('value')
     # def _value_pc(self):

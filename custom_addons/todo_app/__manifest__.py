@@ -16,13 +16,15 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
+    "sequence": -103,
     'category': 'Productivity',
 
     'version': "15.0.1.0.0",
     'depends': ['base'],
-    # 'application': True,
     'data': [
         'views/todo_menu.xml',
         'views/todo_view.xml'
     ],
+    "installable": True,
+    "application": True,
 }
