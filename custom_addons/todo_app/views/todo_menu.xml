@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!--Action to open to do task list-->
+  <act_window id="action_todo_task" name="To do task" res_model="todo.task" view_mode="tree,form" />
+
+  <!-- Menu item to open task list -->
+  <menuitem id="menu_to_task" name="Todos" action="action_todo_task"/>
+</odoo>

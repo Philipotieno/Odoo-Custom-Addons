@@ -20,6 +20,9 @@
 
     'version': "15.0.1.0.0",
     'depends': ['base'],
-    'application': True,
-
+    # 'application': True,
+    'data': [
+        'views/todo_menu.xml',
+        'views/todo_view.xml'
+    ],
 }
