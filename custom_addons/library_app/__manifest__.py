@@ -24,10 +24,10 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
         'security/library_security.xml',
+        'security/ir.model.access.csv',
         'views/library_menu.xml',
-        'views/templates.xml',
+        # 'views/templates.xml',
     ],
     "installable": True,
     "application": True,
